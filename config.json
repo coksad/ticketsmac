@@ -1,0 +1,20 @@
+{
+  "token": "Njk0MTY4NTEwOTYzOTA4NjUw.XoJ4GA.TGk-9dNgWuOYfkS4FwpvjjBMvOw",
+  "prefix": "ms!",
+  "name": "MAC Salon",
+  "guildID": "694168638248189982",
+  "supportRole": "694168713011658762",
+  "ticketsCat": "694214638581055628",
+  "logChannel": "694214532884594729",
+  "colour": "#FF81B4",
+  "playing": "with MAC (ms!help)",
+  "activityType": "PLAYING",
+  "status": "ONLINE",
+  "useEmbeds": true,
+  "logDMs": true,
+  "cooldown": 3,
+  "ticketImage": true,
+  "tagHereOnly": false,
+  "ticketText": ":round_pushpin: Thank you for choosing MAC Clientele Assistance! We are more than grateful to assist your needs and have you at fast assurance at your finger tips. We hope that you’ll be satisfied with our service and you hope to return with anymore questions. :purple_heart:\n\n:pencil: To help us to help you more efficiently, please type your question and all the necessary information. This way, we’ll know how to answer. :two_hearts:",
+  "debugLevel": 0
+}
