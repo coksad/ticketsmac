@@ -32,8 +32,7 @@ module.exports = {
             .setColor("#E74C3C")
             .setDescription(`:x: **Unknown user.** Please mention a valid user.`)
             return message.channel.send(err1);
-      } else {
-        return message.channel.send(`:x: **Unknown user.** Please mention a valid user.`);
+    
       }
     }
     try {
@@ -46,8 +45,7 @@ module.exports = {
           .setColor(config.colour)
           .setDescription(`${user} has been removed.`)
           message.channel.send(removed);
-    } else {
-       message.channel.send(`${user} has been removed.`);
+   
     }
     // log
     if(config.useEmbeds) {
@@ -58,7 +56,7 @@ module.exports = {
         .addField("Username", user, true)
         .addField("Removed by", message.author, true)
         .addField("Channel", message.channel, true)
-        .setFooter(`DiscordTickets`)
+          .setFooter(`💕 MAC Salon Clientele 💕`)
         .setTimestamp();
       client.channels.get(config.logChannel).send({embed})
     } else {
