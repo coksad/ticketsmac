@@ -20,8 +20,6 @@ module.exports = {
             .setColor("#E74C3C")
             .setDescription(`:x: **This command can only be used within a ticket channel**`)
         return message.channel.send(notTicket);
-      } else {
-        return message.channel.send(`:x: **This command can only be used within a ticket channel**`)
       }
     }
 
@@ -59,7 +57,7 @@ module.exports = {
         .addField("Username", user, true)
         .addField("Added by", message.author, true)
         .addField("Channel", message.channel, true)
-        .setFooter(`DiscordTickets`)
+        .setFooter(`💕 MAC Salon Clientele 💕`)
         .setTimestamp();
       client.channels.get(config.logChannel).send({embed})
     } else {
