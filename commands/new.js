@@ -32,8 +32,7 @@ module.exports = {
 					.setColor("#E74C3C")
 					.setDescription(`:x: You already have an open ticket.`)
 				return message.channel.send(err1)
-			} else {
-				message.channel.send(`:x: You already have an open ticket.`)
+	
 			}
 
 		};
@@ -70,8 +69,6 @@ module.exports = {
 				await c.send(`__**Here's your ticket channel, ${message.author}**__`, {
 					files: [`./image.png`]
 				})
-			} else {
-				await c.send(`__**Here's your ticket channel, ${message.author}**__`)
 			}
 
 			const created = new Discord.RichEmbed()
@@ -88,10 +85,6 @@ module.exports = {
 				let w = await c.send(welcome)
 				await w.pin();
 				// c.fetchMessage(c.lastMessageID).delete()
-			} else {
-				message.channel.send(`Your ticket (${c}) has been created.\nPlease read the information sent and follow any instructions given.`)
-				let w = await c.send(`**Ticket topic:** \`${topic}\`\n\n${config.ticketText}`)
-				await w.pin()
 				// c.fetchMessage(c.lastMessageID).delete()
 
 			}
@@ -104,7 +97,7 @@ module.exports = {
 					.setDescription(`\`${topic}\``)
 					.addField("Username", message.author, true)
 					.addField("Channel", c, true)
-					.setFooter(`DiscordTickets`)
+			  .setFooter(`💕 MAC Salon Clientele 💕`)
 					.setTimestamp();
 				client.channels.get(config.logChannel).send({
 					embed
