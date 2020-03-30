@@ -4,11 +4,16 @@
   "description": "A Discord ticket/support - an open-source & self-hosted bot",
   "main": "index.js",
   "dependencies": {
-    "discord.js": "^11.5.1",
-    "leekslazylogger": "^1.1.7"
+    "discord.js": "^11.6.3",
+    "leeks": "0.0.1",
+    "leeks.js": "0.0.8",
+    "leekslazylogger": "^1.1.7",
+    "long": "^4.0.0",
+    "prism-media": "^1.2.1"
   },
   "devDependencies": {},
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
