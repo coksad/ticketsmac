@@ -73,12 +73,12 @@ console.log(log.colour.magentaBright(`
    ##    ####  ######  ##    ## ########    ##     ######
 
   `)); // banner appears in console
-console.log(log.colour.yellow(leeks.styles.bold(`DiscordTickets v${version} - Made By Eartharoid`)));
+console.log(log.colour.yellow(leeks.styles.bold(`DiscordTickets v${version} - Made By josh..#0001`)));
 console.log(log.colour.yellow(leeks.styles.bold(homepage)));
 console.log('\n\n');
 console.log(log.colour.bgGrey(log.colour.grey(`\n\n==========================================================================\n\n`)))
 console.log('\n\n');
-log.init('DiscordTickets (bot created by Eartharoid)')
+log.init('MAC Salon (bot created by josh!..#0001)')
 // all log.* functions are logged to ./log/file.log from here onwards
 log.info(`Starting up...`)
 
@@ -100,12 +100,12 @@ client.once('ready', () => { // after bot has logged in
     const embed = new Discord.RichEmbed()
       .setAuthor(`${client.user.username} / Ticket Log`, client.user.avatarURL)
       .setColor("#2ECC71")
-      .setDescription(":white_check_mark: **Started succesfully**")
-      .setFooter(`DiscordTickets by Eartharoid`);
+      .setDescription(":white_check_mark: **Started successfully! Prompt 1**")
+        .setFooter(`💕 MAC Salon Clientele 💕`);
     client.channels.get(config.logChannel).send(embed)
-  } else {
-    client.channels.get(config.logChannel).send(":white_check_mark: **Started succesfully**")
-  }
+  } 
+  
+  console.debug(config.guildID);
   if (client.guilds.get(config.guildID).member(client.user).hasPermission("ADMINISTRATOR", false)) {
     log.info(`Checking permissions...`);
     setTimeout(function() {
@@ -117,10 +117,9 @@ client.once('ready', () => { // after bot has logged in
         .setAuthor(`${client.user.username} / Ticket Log`, client.user.avatarURL)
         .setColor("#2ECC71")
         .setDescription(":white_check_mark: **Required permissions have been granted**")
-        .setFooter(`DiscordTickets by Eartharoid`);
+          .setFooter(`💕 MAC Salon Clientele 💕`);
       client.channels.get(config.logChannel).send(embed)
-    } else {
-      client.channels.get(config.logChannel).send(":white_check_mark: **Started succesfully**")
+
     }
   } else {
     log.error(`Required permissions have not been granted`)
@@ -130,12 +129,11 @@ client.once('ready', () => { // after bot has logged in
         .setAuthor(`${client.user.username} / Ticket Log`, client.user.avatarURL)
         .setColor("#E74C3C")
         .setDescription(":x: **Required permissions have not been granted**\nPlease give the bot the `ADMINISTRATOR` permission")
-        .setFooter(`DiscordTickets by Eartharoid`);
+         .setFooter(`💕 MAC Salon Clientele 💕`);
       client.channels.get(config.logChannel).send({
         embed
       })
-    } else {
-      client.channels.get(config.logChannel).send(":white_check_mark: **Started succesfully**")
+  
     }
   }
 
@@ -154,7 +152,7 @@ client.on('message', async message => {
           .setTitle("DM Logger")
           .addField("Username", message.author.tag, true)
           .addField("Message", message.content, true)
-          .setFooter(`DiscordTickets by Eartharoid`);
+            .setFooter(`💕 MAC Salon Clientele 💕`);
         client.channels.get(config.logChannel).send(embed)
       } else {
         client.channels.get(config.logChannel).send(`DM received from **${message.author.tag} (${message.author.id})** : \n\n\`\`\`${message.content}\`\`\``);
@@ -198,9 +196,6 @@ client.on('message', async message => {
           .setColor("#E74C3C")
           .setDescription(`\n**Usage:** \`${config.prefix}${command.name} ${command.usage}\`\nType \`${config.prefix}help ${command.name}\` for more information`)
         return message.channel.send({embed})
-
-    } else {
-      return message.channel.send(`**Usage:** \`${config.prefix}${command.name} ${command.usage}\`\nType \`${config.prefix}help ${command.name}\` for more information`)
     }
   };
 
@@ -222,8 +217,7 @@ client.on('message', async message => {
           .setColor("#E74C3C")
           .setDescription(`:x: **Please do not spam commands** (wait ${timeLeft.toFixed(1)}s)`)
         return message.channel.send({embed})
-      } else {
-        return message.reply(`please do not spam commands (wait ${timeLeft.toFixed(1)}s)`);
+    
       }
 
     }
@@ -241,7 +235,7 @@ client.on('message', async message => {
         .setTitle("Command Used")
         .addField("Username", message.author, true)
         .addField("Command", command.name, true)
-        .setFooter(`DiscordTickets`)
+          .setFooter(`💕 MAC Salon Clientele 💕`)
         .setTimestamp();
       client.channels.get(config.logChannel).send({embed})
     } else {
