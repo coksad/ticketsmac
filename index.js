@@ -78,7 +78,7 @@ console.log(log.colour.yellow(leeks.styles.bold(homepage)));
 console.log('\n\n');
 console.log(log.colour.bgGrey(log.colour.grey(`\n\n==========================================================================\n\n`)))
 console.log('\n\n');
-log.init('MAC Salon (bot created by josh!..#0001)')
+log.init('Discord Bots (bot created by josh!..#0001)')
 // all log.* functions are logged to ./log/file.log from here onwards
 log.info(`Starting up...`)
 
@@ -101,7 +101,7 @@ client.once('ready', () => { // after bot has logged in
       .setAuthor(`${client.user.username} / Ticket Log`, client.user.avatarURL)
       .setColor("#2ECC71")
       .setDescription(":white_check_mark: **Started successfully! Prompt 1**")
-        .setFooter(`💕 MAC Salon Clientele 💕`);
+        .setFooter(`Discord Bots`);
     client.channels.get(config.logChannel).send(embed)
   } 
   
@@ -117,7 +117,7 @@ client.once('ready', () => { // after bot has logged in
         .setAuthor(`${client.user.username} / Ticket Log`, client.user.avatarURL)
         .setColor("#2ECC71")
         .setDescription(":white_check_mark: **Required permissions have been granted**")
-          .setFooter(`💕 MAC Salon Clientele 💕`);
+          .setFooter(`Discord Bots`);
       client.channels.get(config.logChannel).send(embed)
 
     }
@@ -129,7 +129,7 @@ client.once('ready', () => { // after bot has logged in
         .setAuthor(`${client.user.username} / Ticket Log`, client.user.avatarURL)
         .setColor("#E74C3C")
         .setDescription(":x: **Required permissions have not been granted**\nPlease give the bot the `ADMINISTRATOR` permission")
-         .setFooter(`💕 MAC Salon Clientele 💕`);
+         .setFooter(`Discord Bots`);
       client.channels.get(config.logChannel).send({
         embed
       })
@@ -152,7 +152,7 @@ client.on('message', async message => {
           .setTitle("DM Logger")
           .addField("Username", message.author.tag, true)
           .addField("Message", message.content, true)
-            .setFooter(`💕 MAC Salon Clientele 💕`);
+            .setFooter(`Discord Bots`);
         client.channels.get(config.logChannel).send(embed)
       } else {
         client.channels.get(config.logChannel).send(`DM received from **${message.author.tag} (${message.author.id})** : \n\n\`\`\`${message.content}\`\`\``);
@@ -235,7 +235,7 @@ client.on('message', async message => {
         .setTitle("Command Used")
         .addField("Username", message.author, true)
         .addField("Command", command.name, true)
-          .setFooter(`💕 MAC Salon Clientele 💕`)
+          .setFooter(`Discord Bot`)
         .setTimestamp();
       client.channels.get(config.logChannel).send({embed})
     } else {
@@ -244,7 +244,7 @@ client.on('message', async message => {
     log.console(`${message.author.tag} used the '${command.name}' command`)
   } catch (error) {
     log.error(error);
-    message.channel.send(`:x: **Oof!** An error occured whilst executing that command.\nThe issue has been reported.`);
+    message.channel.send(`:x: An error occured whilst executing that command.\nThe issue has been reported.`);
     log.error(`An unknown error occured whilst executing the '${command.name}' command`);
   }
 
