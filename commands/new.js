@@ -67,7 +67,7 @@ module.exports = {
 
 			if (config.ticketImage) {
 				await c.send(`__**Here's your ticket channel, ${message.author}**__`, {
-					files: [`./image.png`]
+					files: [`./here_josh (1).png`]
 				})
 			}
 
@@ -97,7 +97,7 @@ module.exports = {
 					.setDescription(`\`${topic}\``)
 					.addField("Username", message.author, true)
 					.addField("Channel", c, true)
-			  .setFooter(`💕 MAC Salon Clientele 💕`)
+			  .setFooter(`Discord Bots`)
 					.setTimestamp();
 				client.channels.get(config.logChannel).send({
 					embed
