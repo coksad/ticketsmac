@@ -17,7 +17,7 @@ module.exports = {
     if(!message.channel.name.startsWith('ticket-')) {
       if(config.useEmbeds) {
         const notTicket = new Discord.RichEmbed()
-            .setColor("#E74C3C")
+            .setColor("#b3cde0")
             .setDescription(`:x: **This command can only be used within a ticket channel**`)
         return message.channel.send(notTicket);
       }
@@ -57,7 +57,7 @@ module.exports = {
         .addField("Username", user, true)
         .addField("Added by", message.author, true)
         .addField("Channel", message.channel, true)
-        .setFooter(`💕 MAC Salon Clientele 💕`)
+        .setFooter(`Discord Bots`)
         .setTimestamp();
       client.channels.get(config.logChannel).send({embed})
     } else {
