@@ -23,7 +23,7 @@ module.exports = {
     const embed = new Discord.RichEmbed()
       .setTitle("Channel Renamed")
       .setColor(config.colour)
-      .setDescription( `I have renamed the channel name to your specified command.`)
+      .setDescription( `I have renamed the channel name to your specified command. Please ensure you change the ticket name back to "ticket-123" to close.`)
     message.channel.send(embed);
 
         
