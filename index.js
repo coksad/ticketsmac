@@ -152,7 +152,7 @@ client.on('message', async message => {
           .setTitle("DM Logger")
           .addField("Username", message.author.tag, true)
           .addField("Message", message.content, true)
-            .setFooter(`Discord Bots`);
+            .setFooter(`Perfumiez Support`);
         client.channels.get(config.logChannel).send(embed)
       } else {
         client.channels.get(config.logChannel).send(`DM received from **${message.author.tag} (${message.author.id})** : \n\n\`\`\`${message.content}\`\`\``);
@@ -235,7 +235,7 @@ client.on('message', async message => {
         .setTitle("Command Used")
         .addField("Username", message.author, true)
         .addField("Command", command.name, true)
-          .setFooter(`Discord Bot`)
+          .setFooter(`Perfumiez Support`)
         .setTimestamp();
       client.channels.get(config.logChannel).send({embed})
     } else {
