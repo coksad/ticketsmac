@@ -56,7 +56,7 @@ module.exports = {
         .addField("Username", user, true)
         .addField("Removed by", message.author, true)
         .addField("Channel", message.channel, true)
-          .setFooter(`Discord Bots`)
+          .setFooter(`Perfumiez Support`)
         .setTimestamp();
       client.channels.get(config.logChannel).send({embed})
     } else {
