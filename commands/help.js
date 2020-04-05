@@ -36,7 +36,7 @@ module.exports = {
 					.setDescription(`\nType \`${config.prefix}help [command]\` for more information about a specific command.`)
 	        // .addField("...", `...`, true)
 	        // .addField("...", `...`, true)
-	         .setFooter(`Perfumiez Support`);
+	         .setFooter(`Sweetology Support`);
 
 					var cmds = [];
 					cmds.push(commands.map(command => embed.addField(`${config.prefix}${command.name}`, `\`${command.description}\``)));
@@ -65,7 +65,7 @@ module.exports = {
 				const cmd = new Discord.RichEmbed()
 	        .setColor(config.colour)
 					.addField(`Command`,`\`${command.name}\``, true)
-	         .setFooter(`Perfumiez Support`)
+	         .setFooter(`Sweetology Support`)
 
 				if (command.aliases) cmd.addField("Aliases", `\`${command.aliases.join(', ')}\``, true);
 				if (command.description) cmd.addField("Description", `\`${command.description}\``, false);
