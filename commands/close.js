@@ -33,7 +33,7 @@ module.exports = {
   					.setColor(config.colour)
   	        .addField("Username", message.author, true)
   	        .addField("Channel", message.channel.name, true)
-  	        .setFooter(`Perfumiez Support`)
+  	        .setFooter(`Sweetology`)
   					.setTimestamp();
   	      client.channels.get(config.logChannel).send({embed})
   	    } else {
