@@ -101,7 +101,7 @@ client.once('ready', () => { // after bot has logged in
       .setAuthor(`${client.user.username} / Ticket Log`, client.user.avatarURL)
       .setColor("#2ECC71")
       .setDescription(":white_check_mark: **Started successfully! Prompt 1**")
-        .setFooter(`Discord Bots`);
+        .setFooter(`Sweetology`);
     client.channels.get(config.logChannel).send(embed)
   } 
   
@@ -117,7 +117,7 @@ client.once('ready', () => { // after bot has logged in
         .setAuthor(`${client.user.username} / Ticket Log`, client.user.avatarURL)
         .setColor("#2ECC71")
         .setDescription(":white_check_mark: **Required permissions have been granted**")
-          .setFooter(`Discord Bots`);
+          .setFooter(`Sweetology`);
       client.channels.get(config.logChannel).send(embed)
 
     }
@@ -129,7 +129,7 @@ client.once('ready', () => { // after bot has logged in
         .setAuthor(`${client.user.username} / Ticket Log`, client.user.avatarURL)
         .setColor("#E74C3C")
         .setDescription(":x: **Required permissions have not been granted**\nPlease give the bot the `ADMINISTRATOR` permission")
-         .setFooter(`Discord Bots`);
+         .setFooter(`Sweetology`);
       client.channels.get(config.logChannel).send({
         embed
       })
@@ -235,7 +235,7 @@ client.on('message', async message => {
         .setTitle("Command Used")
         .addField("Username", message.author, true)
         .addField("Command", command.name, true)
-          .setFooter(`Perfumiez Support`)
+          .setFooter(`Sweetology`)
         .setTimestamp();
       client.channels.get(config.logChannel).send({embed})
     } else {
